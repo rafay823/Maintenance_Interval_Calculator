@@ -1,0 +1,34 @@
+Task: Maintenance Interval Calculator
+
+Imagine we are working with an up-and-coming Mercedes-Benz dealership known for excellent service and cutting-edge technology. Through our product, "Serviceflow," we have digitalized the dealership's aftersales process, and as the final milestone, the workshop scheduling system is being digitalized.
+
+Now, it's your turn! To optimize the dealership's workflow, our development team has the idea to create a console application in Python to plan and manage appointments efficiently. This application should help the dealership team maintain an overview of their calendar and provide smooth service for their customers.
+
+Your task is to develop a simple yet powerful solution that includes the following functions:
+
+Collect Vehicle Data:
+
+Prompt the user for the vehicle make, model, year, and current mileage.
+Define Maintenance Intervals:
+
+Create a dictionary with predefined maintenance intervals for various vehicle types.
+Example: {"VW Golf": {"Oil Change": 15_000, "Inspection": 30_000}}
+Calculate Next Maintenance:
+
+Based on the vehicle data and mileage, determine when the next maintenance is due.
+Consider various maintenance types (e.g., oil change, inspection, brake fluid).
+Display Results:
+
+Show the user a clear list of upcoming maintenance tasks.
+Display the remaining mileage until the next maintenance is due.
+Additional Requirements:
+
+Implement basic error handling for user inputs.
+Comment on your code.
+If possible, test your code.
+Structure your code into functions.
+
+
+Bonus (if you have extra time):
+
+Allow users to input custom maintenance intervals for non-predefined vehicle models.
