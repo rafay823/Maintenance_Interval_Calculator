@@ -5,13 +5,13 @@ from unittest.mock import patch
 
 def test_get_maintenance_intervals_with_predefined():
     # Assuming you have a predefined interval for VW Golf
-    intervals = get_maintenance_intervals("VW", "Golf")
+    intervals = get_maintenance_intervals("VW", "Golf","2019")
     assert intervals.intervals == {"Oil Change": 15000, "Inspection": 30000,"Brake Fluid": 40000}
 def test_get_maintenance_intervals_with_custom():
     # Mock input to simulate user input for custom intervals
 
     with patch('builtins.input', side_effect=["30000", "40000", "50000"]):
-        intervals = get_maintenance_intervals("VW", "Polo")
+        intervals = get_maintenance_intervals("VW", "Polo","2019")
         assert intervals.intervals == {
             "Oil Change": 30000,
             "Inspection": 40000,

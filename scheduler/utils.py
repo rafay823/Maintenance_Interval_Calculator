@@ -3,10 +3,12 @@ from data.maintenance_interval_data import MAINTENANCE_INTERVALS
 from typing import Dict
 
 """Get predefined maintenance intervals or allow custom input."""
-def get_maintenance_intervals(make: str, model: str) -> MaintenanceInterval:
+def get_maintenance_intervals(make: str, model: str, year: str) -> MaintenanceInterval:
     key = f"{make} {model}"
+    print(key)
     if key in MAINTENANCE_INTERVALS:
-        return MAINTENANCE_INTERVALS[key]
+        if year in MAINTENANCE_INTERVALS[key]:
+            return MAINTENANCE_INTERVALS[key][year]
 
     print(f"No predefined intervals for {key}. Let's set custom intervals.")
     intervals = {}

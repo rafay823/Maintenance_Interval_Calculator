@@ -24,7 +24,7 @@ def main():
         vehicle_data = get_vehicle_data()
         if not vehicle_data:
             continue
-        intervals = get_maintenance_intervals(vehicle_data.make, vehicle_data.model)
+        intervals = get_maintenance_intervals(vehicle_data.make, vehicle_data.model,vehicle_data.year)
         upcoming_maintenance = calculate_next_maintenance(vehicle_data.current_mileage, intervals)
         display_upcoming_maintenance(upcoming_maintenance)
 
